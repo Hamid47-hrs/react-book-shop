@@ -1,10 +1,11 @@
 import React from "react";
 import Wrapper from "../../hoc/Wrapper";
+import NavBar from "../navigation/navbar/NavBar";
 
 const Layout = (props) => {
   return (
     <Wrapper>
-      <div>Navigation</div>
+      <NavBar />
       <main>{props.children}</main>
     </Wrapper>
   );
