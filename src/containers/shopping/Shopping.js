@@ -3,14 +3,28 @@ import Wrapper from "../../hoc/Wrapper";
 import Controls from "../../components/controls/Controls";
 import Modal from "../../components/ui-element/modal/Modal";
 import Cart from "../../components/cart/Cart";
+import ApiInsctance from "../../orderAPI";
+import Loading from "../../components/ui-element/loading/Loading";
 
 const Shopping = () => {
+  const [loading, setLoading] = useState(false);
+  const [showCart, setShowCart] = useState(false);
   const [cart, setCart] = useState({
     booksCart: [],
     totalPrice: 0,
   });
-
-  const [showCart, setShowCart] = useState(false);
+  const orderData = {
+    cart: cart,
+    customer: {
+      userId: 1,
+      name: "hamid reza sadati",
+      email: "hamid47.hrs@gmail.com",
+      phoneNumber: "+989050551235",
+      address: "Sharbati, Keshavarz Avenue, Sari, Mazandaran, Iran",
+      postalCode: "4813795578",
+      vipUser: true,
+    },
+  };
 
   const openCartHandler = () => {
     setShowCart(true);
@@ -62,8 +76,6 @@ const Shopping = () => {
         totalPrice: newTotalPrice,
       });
     }
-
-    console.log(cart);
   };
 
   const removeProductHandler = (id) => {
@@ -108,8 +120,26 @@ const Shopping = () => {
     } else {
       alert("There is no Item in the cart.");
     }
+  };
 
-    console.log(cart);
+  const sendOrderRequestHendler = () => {
+    setLoading(true);
+
+    ApiInsctance.post("/orders.json", orderData)
+      .then((res) => {
+        setCart({
+          booksCart: [],
+          totalPrice: 0,
+        });
+        setLoading(false);
+        closeCartHandler();
+      })
+      .catch((err) => {
+        setLoading(false);
+        closeCartHandler();
+
+        console.error(err);
+      });
   };
 
   return (
@@ -120,11 +150,16 @@ const Shopping = () => {
       <div>
         {showCart ? (
           <Modal showCart={showCart} closeModal={closeCartHandler}>
-            <Cart
-              removeProduct={removeProductHandler}
-              closeModal={closeCartHandler}
-              cart={cart}
-            />
+            {loading ? (
+              <Loading />
+            ) : (
+              <Cart
+                removeProduct={removeProductHandler}
+                closeModal={closeCartHandler}
+                sendOrder={sendOrderRequestHendler}
+                cart={cart}
+              />
+            )}
           </Modal>
         ) : null}
       </div>

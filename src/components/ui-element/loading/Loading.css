@@ -1,0 +1,11 @@
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loading p {
+  text-align: center;
+  color: #555555;
+  font-weight: bold;
+}

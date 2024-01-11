@@ -9,27 +9,25 @@ const Cart = (props) => {
       {props.cart.booksCart.length != 0 ? (
         props.cart.booksCart.map((item, index) => {
           return (
-            <>
-              <div key={index} className="cartItem">
-                <div>
-                  <span> {index + 1}. </span>
-                  <span>{item.bookName}</span>
-                </div>
-                <div>
-                  <span> : ${item.price}</span>
-                </div>
-                <div>
-                  <span>Quantity: {item.quantity}</span>
-                </div>
-                <div></div>
-                <button
-                  onClick={() => props.removeProduct(item.id)}
-                  className="btn"
-                >
-                  Remove
-                </button>
+            <div key={index} className="cartItem">
+              <div>
+                <span> {index + 1}. </span>
+                <span>{item.bookName}</span>
               </div>
-            </>
+              <div>
+                <span> : ${item.price}</span>
+              </div>
+              <div>
+                <span>Quantity: {item.quantity}</span>
+              </div>
+              <div></div>
+              <button
+                onClick={() => props.removeProduct(item.id)}
+                className="btn"
+              >
+                Remove
+              </button>
+            </div>
           );
         })
       ) : (
@@ -38,7 +36,9 @@ const Cart = (props) => {
       <div>
         <p>Total Price : ${props.cart.totalPrice}</p>
         <p>Do you want to Continue?</p>
-        <Button btnType="success">Yes</Button>
+        <Button btnType="success" clickAction={props.sendOrder}>
+          Yes
+        </Button>
         <Button btnType="danger" clickAction={props.closeModal}>
           No
         </Button>
