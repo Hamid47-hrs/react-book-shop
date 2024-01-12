@@ -1,11 +1,21 @@
 .builder {
   display: flex;
-  justify-content: space-around;
+  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
   margin: 12px 0;
 }
 
-.builder  button {
+.builder p {
+  text-align: center;
+  text-wrap: wrap;
+}
+
+.builder img {
+  width: 5rem;
+}
+
+.builder button {
   display: block;
   font: inherit;
   padding: 10px 10px;

@@ -1,14 +1,14 @@
 import React from "react";
+import bookImage from "../../../assets/images/books.jpg";
 import "./builder.css";
 
 const Builder = (props) => {
   return (
     <div className="builder">
-      <div></div>
-      <div></div>
+      <img src={bookImage} alt="Book Image" />
       <div>
         <p>Book Title : {props.title}</p>
-        <p>Book Genre : {props.genre.map((item) => item + ", ")}</p>
+        <p>Genre : {props.genre.map((item) => item + ", ")}</p>
         <p>Cost : ${props.price}</p>
       </div>
       <button
@@ -23,8 +23,6 @@ const Builder = (props) => {
       >
         Add Item
       </button>
-      <div></div>
-      <div></div>
     </div>
   );
 };

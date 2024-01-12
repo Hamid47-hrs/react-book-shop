@@ -21,25 +21,26 @@ const Controls = (props) => {
   }, []);
 
   return (
-    <div className="controls">
-      {loading ? (
-        <Loading />
-      ) : (
-        products.map((item) => {
-          return (
-            <Builder
-              key={item.id}
-              id={item.id}
-              title={item.bookName}
-              genre={item.genre}
-              price={item.price}
-              addProduct={props.addProduct}
-            />
-          );
-        })
-      )}
-
-      <div>
+    <div className="control-container">
+      <div className="controls">
+        {loading ? (
+          <Loading />
+        ) : (
+          products.map((item) => {
+            return (
+              <Builder
+                key={item.id}
+                id={item.id}
+                title={item.bookName}
+                genre={item.genre}
+                price={item.price}
+                addProduct={props.addProduct}
+              />
+            );
+          })
+        )}
+      </div>
+      <div className="cart-button">
         <button className="show-cart-btn" onClick={props.openModal}>
           Show Cart
         </button>
