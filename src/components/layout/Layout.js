@@ -6,8 +6,8 @@ const links = [
   { Home: "/" },
   { Store: "/store" },
   { Account: "/account" },
-  { About: "/about" },
-  { "df dfd": "dfdf" },
+  { "About Me": "/about" },
+  { "Hamid 47": "https://github.com/Hamid47-hrs" },
 ];
 
 const Layout = (props) => {

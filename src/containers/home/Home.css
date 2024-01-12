@@ -1,0 +1,47 @@
+.home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 2rem;
+}
+
+.home h1 {
+  font-weight: bold;
+  font-size: 3rem;
+  animation-name: floating-left;
+  animation-duration: 1.5s;
+  animation-timing-function: ease;
+}
+
+.home > h1 > span {
+  color: #4685e4;
+  text-shadow: 1px 1px 7px #0000008c;
+}
+
+.home p {
+  font-size: 2rem;
+  animation-name: floating-right;
+  animation-duration: 1.5s;
+  animation-timing-function: ease;
+}
+
+@keyframes floating-left {
+  0% {
+    transform: translate(-1000px, 0);
+  }
+
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes floating-right {
+    0% {
+      transform: translate(0, 500px);
+    }
+  
+    100% {
+      transform: translate(0, 0);
+    }
+  }
