@@ -1,0 +1,43 @@
+body {
+  background-color: #dedede;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.error {
+  font-size: 10rem;
+  color: #1d5ed7;
+  text-shadow: 2px 2px 0 #000000;
+}
+
+.message {
+  font-size: 3rem;
+  color: #000000;
+}
+
+.link {
+  display: inline-block;
+  margin-top: 2rem;
+  padding: 1rem 2rem;
+  background-color: #1d5ed7;
+  color: #ffffff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  border-radius: 5px;
+  box-shadow: 2px 2px 0 #000000;
+}
+
+.link:hover {
+  background-color: #ffffff;
+  color: #1d5ed7;
+  border: 2px solid #1d5ed7;
+}
+
+.message-text {
+    font-size: 1.5rem;
+}
