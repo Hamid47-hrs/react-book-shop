@@ -30,34 +30,3 @@
 .cartItem > div {
   margin-right: 0.5rem;
 }
-
-.show-cart-btn {
-  background-color: #e1bee7;
-  outline: none;
-  border: none;
-  border-radius: 3px;
-  color: #8e24aa;
-  font: inherit;
-  padding: 10px 20px;
-  margin-top: 32px;
-  cursor: pointer;
-}
-
-.show-cart-btn:hover {
-  background-color: #d645fe;
-  color: #ffffff;
-  box-shadow: 0 0 20px 5px #d886ef;
-}
-
-.cartItem button {
-  display: block;
-  font: inherit;
-  padding: 10px 10px;
-  margin: 0 12px;
-  width: 90px;
-  background-color: #ea4732;
-  color: #ffffff;
-  border: none;
-  border-radius: 3px;
-  outline: none;
-}

@@ -14,16 +14,3 @@
 .search-bar input:focus {
   outline: none;
 }
-
-.search-bar button {
-  border: none;
-  border-radius: 4px;
-  padding: 5px 10px;
-  margin-left: 1rem;
-  cursor: pointer;
-}
-
-.search-bar button:hover {
-  border: solid 3px #7600a4;
-  background-color: #de8aff;
-}

@@ -3,6 +3,7 @@ import Builder from "./builder/Builder";
 import ApiInsctance from "../../orderAPI";
 import Loading from "../ui-element/loading/Loading";
 import "./Controls.css";
+import Button from "../ui-element/button/Button";
 
 const Controls = (props) => {
   const [products, setProducts] = useState([]);
@@ -41,9 +42,9 @@ const Controls = (props) => {
         )}
       </div>
       <div className="cart-button">
-        <button className="show-cart-btn" onClick={props.openModal}>
+        <Button type="show-cart" click={props.openModal}>
           Show Cart
-        </button>
+        </Button>
       </div>
     </div>
   );

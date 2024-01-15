@@ -21,12 +21,12 @@ const Cart = (props) => {
                 <span>Quantity: {item.quantity}</span>
               </div>
               <div></div>
-              <button
-                onClick={() => props.removeProduct(item.id)}
-                className="btn"
+              <Button
+                type="remove-element"
+                click={() => props.removeProduct(item.id)}
               >
                 Remove
-              </button>
+              </Button>
             </div>
           );
         })
@@ -36,10 +36,10 @@ const Cart = (props) => {
       <div>
         <p>Total Price : ${props.cart.totalPrice}</p>
         <p>Do you want to Continue?</p>
-        <Button btnType="success" clickAction={props.sendOrder}>
+        <Button type="success" click={props.sendOrder}>
           Yes
         </Button>
-        <Button btnType="danger" clickAction={props.closeModal}>
+        <Button type="danger" click={props.closeModal}>
           No
         </Button>
       </div>

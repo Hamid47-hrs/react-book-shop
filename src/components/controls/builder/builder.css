@@ -15,19 +15,6 @@
   width: 5rem;
 }
 
-.builder button {
-  display: block;
-  font: inherit;
-  padding: 10px 10px;
-  margin: 0 12px;
-  width: 90px;
-  background-color: #9c27b0;
-  color: #ffffff;
-  border: none;
-  border-radius: 3px;
-  outline: none;
-}
-
 .builder > div {
   color: #8e24aa;
   margin: 0 12px;
