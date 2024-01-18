@@ -5,14 +5,14 @@ const Input = (props) => {
   return (
     <div className="input-container">
       <label
-        className={`input-label ${props.isInvalid ? "invalid" : null}`}
+        className={`input-label ${props.isInvalid ? "invalid" : ""}`}
         htmlFor={props.id}
       >
         {`${props.label} :`}
       </label>
       <input
         className={`text-input ${
-          props.isInvalid ? "invalid invalid-input" : null
+          props.isInvalid ? "invalid invalid-input" : ""
         }`}
         type={props.type}
         id={props.id}

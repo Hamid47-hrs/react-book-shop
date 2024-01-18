@@ -1,0 +1,11 @@
+.account {
+  width: 95%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  background-color: #fafaff;
+  box-shadow: 0 0 25px 5px rgba(0, 0, 0, 0.07);
+}
