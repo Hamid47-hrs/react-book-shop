@@ -1,0 +1,9 @@
+.sign-up button.success {
+  position: relative;
+  left: 50%;
+}
+
+.error-text {
+  color: #e44a47;
+  font-size: 0.8rem;
+}
