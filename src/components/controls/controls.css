@@ -27,6 +27,21 @@
   border-radius: 5px;
   box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.07);
 }
+
 .cartItem > div {
   margin-right: 0.5rem;
 }
+
+.netError {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.netError p {
+  color: #747474;
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+

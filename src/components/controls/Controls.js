@@ -8,6 +8,7 @@ import Button from "../ui-element/button/Button";
 const Controls = (props) => {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(false);
 
   useEffect(() => {
     setLoading(true);
@@ -17,7 +18,8 @@ const Controls = (props) => {
         setLoading(false);
       })
       .catch((err) => {
-        console.error(err);
+        setError(err.message);
+        setLoading(false);
       });
   }, []);
 
@@ -26,6 +28,11 @@ const Controls = (props) => {
       <div className="controls">
         {loading ? (
           <Loading />
+        ) : error ? (
+          <div className="netError">
+            <h1>{error}</h1>
+            <p>Please Check your internet connection and try again.</p>
+          </div>
         ) : (
           products.map((item) => {
             return (
